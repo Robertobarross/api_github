@@ -4,18 +4,21 @@
 
 @section('content'){{--Extenção do arquivo template--}}
 
-<div id="dados-user">
-    @foreach ($apiArray as $api)
-    <h1>Consumindo Api GitHub</h1>
 
-    <li active>Usuário: {{ $apiArray['name'] }}</li>
+<div id="dados-user">
+
+    <h1 class="dados">Consumindo Api GitHub</h1>
+
+    @foreach ($apiArray as $api)
 
     <ul>
-        <li active>Qualificações: {{ $apiArray['bio'] }}</li>
-        <li active>Projetos: {{ $apiArray['public_repos'] }}</li>
-        <li active>Seguidosres: {{ $apiArray['followers'] }}</li>
-        <li active>Seguindo: {{ $apiArray['following'] }}</li>
+        <li class="dados" active>Usuário: {{ $apiArray['name'] }}</li>
+        <li class="dados" active>Qualificações: {{ $apiArray['bio'] }}</li>
+        <li class="dados" active>Projetos: {{ $apiArray['public_repos'] }}</li>
+        <li class="dados" active>Seguidosres: {{ $apiArray['followers'] }}</li>
+        <li class="dados" active>Seguindo: {{ $apiArray['following'] }}</li>
     </ul>
+    <hr class="linha"></hr>
 
     @endforeach
 </div>
