@@ -1,0 +1,8 @@
+#barra-lateral{
+    width: 20%;
+    height: 800px;
+    border: 1px solid black;
+    float: left;
+    margin-top: -25px;
+    margin-left: -10px;
+}
