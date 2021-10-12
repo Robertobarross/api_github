@@ -17,22 +17,22 @@ use App\Http\Controllers\ApiController;
 */
 
 /* ------------------------------ */
-Route::get('/', function () {
+Route::get('/', function () { // rota api
 
     $api = Http::get('https://api.github.com/users/Robertobarross'); // Requisitando api dados do usuário
-    $apiArray = $api->json();
+    $apiArray = $api->json(); // Chamada de dados em json
 
-return view('api', ['apiArray' => $apiArray]);
+return view('api', ['apiArray' => $apiArray]); // Retornado a view api e declarando variáveis
 });
 /* ------------------------------ */
 
 
 /* ------------------------------ */
-Route::get('/show', function () {
+Route::get('/show', function () { // Rota show
 
     $repos = Http::get('https://api.github.com/users/robertobarross/repos');  // Requisitando repositórios/projetos do usuário
-    $reposArray = $repos->json();
+    $reposArray = $repos->json(); // Chamada de dados em json
 
-    return view('show', ['reposArray' => $reposArray]);
+    return view('show', ['reposArray' => $reposArray]); // Retornado a view show e declarando variáveis
 });
 /* ------------------------------ */
